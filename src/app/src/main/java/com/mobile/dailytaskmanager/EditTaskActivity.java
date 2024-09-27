@@ -22,6 +22,7 @@ public class EditTaskActivity extends AppCompatActivity {
         editTextTaskName = findViewById(R.id.editTextTaskName);
         timePicker = findViewById(R.id.timePicker);
         Button buttonSaveTask = findViewById(R.id.buttonSaveTask);
+
         Intent intent = getIntent();
         String taskName = intent.getStringExtra("TASK_NAME");
         int hour = intent.getIntExtra("TASK_HOUR", -1);

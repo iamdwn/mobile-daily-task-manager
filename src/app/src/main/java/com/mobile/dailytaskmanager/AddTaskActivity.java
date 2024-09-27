@@ -2,7 +2,6 @@ package com.mobile.dailytaskmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -22,20 +21,19 @@ public class AddTaskActivity extends AppCompatActivity {
         timePicker = findViewById(R.id.timePicker);
         Button buttonAddTask = findViewById(R.id.buttonAddTask);
 
-        buttonAddTask.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String taskName = editTextTaskName.getText().toString();
-                int hour = timePicker.getHour();
-                int minute = timePicker.getMinute();
+        buttonAddTask.setOnClickListener(v -> {
+            String taskName = editTextTaskName.getText().toString();
 
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("TASK_NAME", taskName);
-                resultIntent.putExtra("TASK_HOUR", hour);
-                resultIntent.putExtra("TASK_MINUTE", minute);
-                setResult(RESULT_OK, resultIntent);
-                finish();
-            }
+            int hour = timePicker.getHour();
+            int minute = timePicker.getMinute();
+
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("TASK_NAME", taskName);
+            resultIntent.putExtra("TASK_HOUR", hour);
+            resultIntent.putExtra("TASK_MINUTE", minute);
+
+            setResult(RESULT_OK, resultIntent);
+            finish();
         });
     }
 }

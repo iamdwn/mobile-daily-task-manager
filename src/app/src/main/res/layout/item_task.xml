@@ -4,30 +4,37 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="8dp"
-    android:background="@color/background_light"
-    android:layout_marginBottom="8dp">
+    android:background="?android:attr/selectableItemBackground">
 
     <TextView
         android:id="@+id/textViewTaskName"
-        android:layout_width="0dp"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:textSize="18sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-    <ImageView
-        android:id="@+id/imageViewEdit"
+    <TextView
+        android:id="@+id/textViewTaskTime"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/buttonEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_edit"
-        android:contentDescription="@string/edit_task"
-        android:layout_marginStart="8dp" />
+        android:contentDescription="Edit Task"
+        android:background="?attr/selectableItemBackgroundBorderless" />
 
-    <ImageView
-        android:id="@+id/imageViewDelete"
+    <ImageButton
+        android:id="@+id/buttonDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_delete"
-        android:contentDescription="@string/delete_task"
-        android:layout_marginStart="8dp" />
+        android:contentDescription="Delete Task"
+        android:background="?attr/selectableItemBackgroundBorderless" />
 </LinearLayout>
