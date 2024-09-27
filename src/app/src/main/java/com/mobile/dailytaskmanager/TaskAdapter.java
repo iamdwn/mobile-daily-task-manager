@@ -39,7 +39,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
             intent.putExtra("TASK_NAME", task.getName());
             intent.putExtra("TASK_HOUR", task.getHour());
             intent.putExtra("TASK_MINUTE", task.getMinute());
-            intent.putExtra("TASK_POSITION", position);  // Pass position to identify which task to update
+            intent.putExtra("TASK_POSITION", position);
             ((Activity) context).startActivityForResult(intent, TaskListActivity.EDIT_TASK_REQUEST);
         });
 

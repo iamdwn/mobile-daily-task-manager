@@ -23,7 +23,6 @@ public class AddTaskActivity extends AppCompatActivity {
 
         buttonAddTask.setOnClickListener(v -> {
             String taskName = editTextTaskName.getText().toString();
-
             int hour = timePicker.getHour();
             int minute = timePicker.getMinute();
 
