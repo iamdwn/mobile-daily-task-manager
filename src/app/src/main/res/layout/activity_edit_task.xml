@@ -20,10 +20,10 @@
         android:timePickerMode="spinner" />
 
     <Button
-        android:id="@+id/buttonAddTask"
+        android:id="@+id/buttonSaveTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Task"
+        android:text="Save Task"
         android:layout_gravity="end"
         android:layout_marginTop="16dp" />
 </LinearLayout>
