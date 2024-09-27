@@ -1,59 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- RecyclerView -->
-
-    <!-- Button Add Task -->
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewTasks"
-        android:layout_width="265dp"
-        android:layout_height="366dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEditTask"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTaskName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Task Name"
-        tools:ignore="MissingConstraints" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        tools:ignore="MissingConstraints" />
-
+    <!-- Button to add a new task, aligned to the bottom of the screen -->
     <Button
-        android:id="@+id/buttonEditTask"
-        android:layout_width="104dp"
-        android:layout_height="53dp"
-        android:text="Edit Task"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.762"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTasks" />
-
-    <Button
-        android:id="@+id/buttonDeleteTask"
+        android:id="@+id/buttonAddTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete Task"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewTasks"
-        app:layout_constraintVertical_bias="0.511" />
+        android:text="Add Task"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp" />
 
+    <!-- RecyclerView for displaying the task list, fills the remaining space above the button -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTaskList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonAddTask" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
