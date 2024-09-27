@@ -13,6 +13,9 @@
         android:theme="@style/Theme.DailyTaskManager"
         tools:targetApi="31">
         <activity
+            android:name=".AddTaskActivity"
+            android:exported="false" />
+        <activity
             android:name=".TaskAddingScreen"
             android:exported="false"
             android:theme="@style/Theme.DailyTaskManager" />
