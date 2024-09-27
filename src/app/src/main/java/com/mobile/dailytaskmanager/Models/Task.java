@@ -15,7 +15,27 @@ public class Task {
         return name;
     }
 
-    public String getCompletionTime() {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
+    public String getFormattedTime() {
         return String.format("%02d:%02d", hour, minute);
     }
 }
